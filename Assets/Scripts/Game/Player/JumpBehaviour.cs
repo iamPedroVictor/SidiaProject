@@ -8,6 +8,7 @@ public class JumpBehaviour : MonoBehaviour
 {
     private Rigidbody rb;
     private Collider collider;
+    private Animator anime;
     [SerializeField]
     private Vector3Reference force;
     [SerializeField]
@@ -20,6 +21,7 @@ public class JumpBehaviour : MonoBehaviour
     {
         this.rb = GetComponent<Rigidbody>();
         this.collider = GetComponent<Collider>();
+        this.anime = GetComponent<Animator>();
         maxDistancia = collider.bounds.extents.y + distanciaDoChao.Value;
     }
 
@@ -27,9 +29,11 @@ public class JumpBehaviour : MonoBehaviour
     void Update()
     {
         isGround = NoChao();
+        anime.SetBool("isGround", isGround);
         if (Input.GetMouseButtonDown(0) && isGround)
         {
             rb.AddForce(this.force.Value,ForceMode.Impulse);
+            anime.SetTrigger("jump");
         }
     }
 
