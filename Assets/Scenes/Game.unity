@@ -631,6 +631,10 @@ MonoBehaviour:
   - tag: Box
     prefab: {fileID: 18125523451340732, guid: cc205e27ae125ad488de4b05d76f0ced, type: 3}
     size: 20
+  - tag: Explosao
+    prefab: {fileID: 5001827286167320596, guid: 92a9c9c9d0b4a2f4b94681e530fe126f,
+      type: 3}
+    size: 2
 --- !u!4 &578351037
 Transform:
   m_ObjectHideFlags: 0
