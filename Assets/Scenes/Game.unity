@@ -1538,13 +1538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d504ee40f4bb14d9a55323e7adc6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TempoMinimo:
+  TempoDeSpawn:
     UsarConstante: 1
     ConstanteValue: 2
-    Variable: {fileID: 0}
-  TempoMaximo:
-    UsarConstante: 1
-    ConstanteValue: 5
     Variable: {fileID: 0}
   InicioTransform: {fileID: 1291822719}
   isRunning:
@@ -1693,9 +1689,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force:
     UsarConstante: 1
-    ConstanteValue: {x: 0, y: 20, z: 0}
+    ConstanteValue: {x: -10, y: 20, z: 0}
     Variable: {fileID: 0}
-  explosionTag: Explosion
+  explosionTag: Explosao
   isRunning:
     UsarConstante: 0
     ConstanteValue: 0
