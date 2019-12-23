@@ -9,10 +9,12 @@ public class TextUI : MonoBehaviour
     private Text textTempo;
     [SerializeField]
     private IntReference tempoDeJogo;
+    [SerializeField]
+    private string baseString;
 
     private void Update()
     {
-        textTempo.text = tempoDeJogo.Value.ToString();
+        textTempo.text = string.Format(baseString,tempoDeJogo.Value.ToString());
     }
 
 }
