@@ -10,9 +10,6 @@ public class PlayerCollider : MonoBehaviour
         obstaculo?.TriggerPlayer();
     }
 
-    public void Teste(string msg) {
-        Debug.Log(msg);
-        Time.timeScale = 0;
-    }
+
 }
 
