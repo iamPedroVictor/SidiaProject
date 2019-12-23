@@ -13,12 +13,10 @@ public class ObstaculoCollider : MonoBehaviour, IPlayerObstaculo, IDestroy
     public void Destroy()
     {
         ObjectPooler.Instance.ReturnObjectToPool(poolTag, this.gameObject);
-        isRunning.Value = false;
     }
 
     public void TriggerPlayer()
     {
-        Debug.Log("!!!");
         gameOverEvent.Raise();
     }
 }
