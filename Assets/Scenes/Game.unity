@@ -1542,6 +1542,10 @@ MonoBehaviour:
     ConstanteValue: 5
     Variable: {fileID: 0}
   InicioTransform: {fileID: 1291822719}
+  isRunning:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
 --- !u!1 &1402454352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100120, guid: 5917c0e93d180a842b61d1ebc62a195c,
@@ -1614,6 +1618,10 @@ MonoBehaviour:
     ConstanteValue: {x: 0, y: 20, z: 0}
     Variable: {fileID: 0}
   explosionTag: Explosion
+  isRunning:
+    UsarConstante: 1
+    ConstanteValue: 0
+    Variable: {fileID: 0}
 --- !u!114 &1402454357
 MonoBehaviour:
   m_ObjectHideFlags: 0

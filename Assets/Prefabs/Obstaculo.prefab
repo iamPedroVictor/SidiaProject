@@ -130,6 +130,10 @@ MonoBehaviour:
     UsarConstante: 1
     ConstanteValue: -8
     Variable: {fileID: 0}
+  isRunning:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
 --- !u!114 &114030041448427496
 MonoBehaviour:
   m_ObjectHideFlags: 0

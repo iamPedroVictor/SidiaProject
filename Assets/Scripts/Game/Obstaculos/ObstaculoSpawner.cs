@@ -11,11 +11,17 @@ public class ObstaculoSpawner : MonoBehaviour
     private FloatReference TempoMaximo;
     [SerializeField]
     private Transform InicioTransform;
+    [SerializeField]
+    private BooleanReference isRunning;
 
     private float tempoSpawn = 2f;
 
     private void Update()
     {
+        if (!isRunning.Value)
+        {
+            return;
+        }
         if(Time.timeSinceLevelLoad > tempoSpawn)
         {
             float proximo = Random.Range(TempoMinimo.Value, TempoMaximo.Value);

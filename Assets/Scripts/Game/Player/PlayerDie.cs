@@ -8,6 +8,8 @@ public class PlayerDie : MonoBehaviour
     private Vector3Reference force;
     [SerializeField]
     private string explosionTag;
+    [SerializeField]
+    private BooleanReference isRunning;
     private Rigidbody rb;
     private float timeToDisable;
     private bool die;
@@ -18,6 +20,7 @@ public class PlayerDie : MonoBehaviour
     }
     public void DestroyPlayer()
     {
+        isRunning.Value = false;
         ObjectPooler.Instance.SpawnFromPool(explosionTag, transform.position, transform.rotation);
         die = true;
         timeToDisable = Time.timeSinceLevelLoad + 2f;
