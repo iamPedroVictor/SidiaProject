@@ -1619,9 +1619,9 @@ MonoBehaviour:
     Variable: {fileID: 0}
   explosionTag: Explosion
   isRunning:
-    UsarConstante: 1
+    UsarConstante: 0
     ConstanteValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
 --- !u!114 &1402454357
 MonoBehaviour:
   m_ObjectHideFlags: 0
