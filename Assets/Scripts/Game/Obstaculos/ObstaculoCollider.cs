@@ -18,6 +18,7 @@ public class ObstaculoCollider : MonoBehaviour, IPlayerObstaculo, IDestroy
 
     public void TriggerPlayer()
     {
+        Debug.Log("!!!");
         gameOverEvent.Raise();
     }
 }

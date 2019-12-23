@@ -148,3 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolTag: Box
   gameOverEvent: {fileID: 11400000, guid: 40bac9029a9f83b45af709e0af1e48d6, type: 2}
+  isRunning:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
