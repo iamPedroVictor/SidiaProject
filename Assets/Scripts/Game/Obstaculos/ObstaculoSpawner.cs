@@ -6,9 +6,7 @@ public class ObstaculoSpawner : MonoBehaviour
 {
     
     [SerializeField]
-    private FloatReference TempoMinimo;
-    [SerializeField]
-    private FloatReference TempoMaximo;
+    private FloatReference TempoDeSpawn;
     [SerializeField]
     private Transform InicioTransform;
     [SerializeField]
@@ -24,7 +22,7 @@ public class ObstaculoSpawner : MonoBehaviour
         }
         if(Time.timeSinceLevelLoad > tempoSpawn)
         {
-            float proximo = Random.Range(TempoMinimo.Value, TempoMaximo.Value);
+            float proximo = TempoDeSpawn.Value;
             tempoSpawn += proximo;
             
             ObjectPooler.Instance.SpawnFromPool("Box", InicioTransform.position, Quaternion.identity);
