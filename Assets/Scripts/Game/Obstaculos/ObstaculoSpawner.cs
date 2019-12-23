@@ -18,9 +18,9 @@ public class ObstaculoSpawner : MonoBehaviour
     {
         if(Time.timeSinceLevelLoad > tempoSpawn)
         {
-            float proximo = Random.RandomRange(TempoMinimo.Value, TempoMaximo.Value);
+            float proximo = Random.Range(TempoMinimo.Value, TempoMaximo.Value);
             tempoSpawn += proximo;
-            Debug.Log(string.Format("Proximo: {0}", proximo));
+            
             ObjectPooler.Instance.SpawnFromPool("Box", InicioTransform.position, Quaternion.identity);
         }
     }
