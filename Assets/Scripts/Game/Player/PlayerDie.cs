@@ -21,7 +21,12 @@ public class PlayerDie : MonoBehaviour
     public void DestroyPlayer()
     {
         isRunning.Value = false;
-        ObjectPooler.Instance.SpawnFromPool(explosionTag, transform.position, transform.rotation);
+        GameObject goExplosion = ObjectPooler.Instance.SpawnFromPool(explosionTag, transform.position, transform.rotation);
+        IniciarParticulas[] particulas = goExplosion.GetComponents<IniciarParticulas>();
+        for (int i = 0; i < particulas.Length; i++)
+        {
+            particulas[i].Iniciar();
+        }
         die = true;
         timeToDisable = Time.timeSinceLevelLoad + 2f;
         rb.AddForce(force.Value, ForceMode.Impulse);
