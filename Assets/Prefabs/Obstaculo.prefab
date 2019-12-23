@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 48726111558286498}
   - component: {fileID: 19238852337739374}
   - component: {fileID: 19238852337739375}
+  - component: {fileID: 114030041448427496}
   m_Layer: 0
   m_Name: Obstaculo
   m_TagString: Obstaculo
@@ -129,3 +130,17 @@ MonoBehaviour:
     UsarConstante: 1
     ConstanteValue: -8
     Variable: {fileID: 0}
+--- !u!114 &114030041448427496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18125523451340732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77ad490b0ac0764b8ebf5a381bd80ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolTag: Box
+  gameOverEvent: {fileID: 11400000, guid: 40bac9029a9f83b45af709e0af1e48d6, type: 2}
