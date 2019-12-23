@@ -59,11 +59,13 @@ public class ObjectPooler : MonoBehaviour
             poolObject.OnSpawn();
         }
 
-        poolDictionary[tag].Enqueue(obj);
-
         return obj;
     }
 
-    
+    public void ReturnObjectToPool(string tag, GameObject go)
+    {
+        poolDictionary[tag].Enqueue(go);
+        go.SetActive(false);
+    }
 
 }
