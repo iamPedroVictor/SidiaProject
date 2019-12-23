@@ -12,6 +12,7 @@ public class ObstaculoCollider : MonoBehaviour, IPlayerObstaculo, IDestroy
     public void Destroy()
     {
         ObjectPooler.Instance.ReturnObjectToPool(poolTag, this.gameObject);
+        Debug.Log("Destroido");
     }
 
     public void TriggerPlayer()

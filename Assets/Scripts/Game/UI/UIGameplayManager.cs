@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UIGameplayManager : MonoBehaviour
 {
+    [SerializeField]
     private GameObject gameplayPanel;
     [SerializeField]
     private IntReference partidasJogadas;
