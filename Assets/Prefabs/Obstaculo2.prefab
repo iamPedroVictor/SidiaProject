@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114592598198080604}
   - component: {fileID: 114220346759189368}
   - component: {fileID: 54234964969744246}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Obstaculo2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ MonoBehaviour:
   velocidade:
     UsarConstante: 0
     ConstanteValue: 0
-    Variable: {fileID: 11400000, guid: 99f89ff458eca4240b8d2dc92783baa2, type: 2}
+    Variable: {fileID: 11400000, guid: 6920b94e2ef33254992337213232430e, type: 2}
   isRunning:
     UsarConstante: 0
     ConstanteValue: 0
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 2384017591620712548}
   - component: {fileID: 3161792576035984742}
   - component: {fileID: 1789059287259651607}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
