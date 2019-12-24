@@ -7,7 +7,7 @@ public class ObjectPooler : MonoBehaviour
     [System.Serializable]
     public class Pool
     {
-        public string tag;
+        public StringReference tag;
         public GameObject prefab;
         public int size;
     }
@@ -26,7 +26,7 @@ public class ObjectPooler : MonoBehaviour
 
         foreach (Pool pool in pools)
         {
-            GameObject parentPool = new GameObject(string.Format("Pool {0}", pool.tag));
+            GameObject parentPool = new GameObject(string.Format("Pool {0}", pool.tag.Value));
             parentPool.transform.SetParent(this.transform);
             Queue<GameObject> objectPool = new Queue<GameObject>();
             for(int i = 0; i < pool.size; i++)
@@ -36,7 +36,7 @@ public class ObjectPooler : MonoBehaviour
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
-            poolDictionary.Add(pool.tag, objectPool);
+            poolDictionary.Add(pool.tag.Value, objectPool);
         }
     }
 

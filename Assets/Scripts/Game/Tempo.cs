@@ -8,7 +8,7 @@ public class Tempo : MonoBehaviour
     private IntReference tempoDeJogo;
     [SerializeField]
     private BooleanReference isRunning;
-
+    
     // Update is called once per frame
     void Update()
     {

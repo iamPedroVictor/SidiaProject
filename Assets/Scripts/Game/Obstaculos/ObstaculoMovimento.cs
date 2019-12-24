@@ -3,20 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Transform))]
-public class ObstaculoMovimento : MonoBehaviour, IPoolObject
+public class ObstaculoMovimento : MonoBehaviour
 {
     [SerializeField]
-    private IntReference velocidadeMinima;
-    [SerializeField]
-    private IntReference velocidadeMaxima;
+    private FloatReference velocidade;
     [SerializeField]
     private BooleanReference isRunning;
-    private int velocidade;
-
-    public void OnSpawn()
-    {
-        velocidade = getVelocidadeRandomica();
-    }
 
     private void FixedUpdate()
     {
@@ -25,11 +17,8 @@ public class ObstaculoMovimento : MonoBehaviour, IPoolObject
             return;
         }
         transform.position = transform.position 
-            + new Vector3(velocidade * Time.fixedDeltaTime, 0, 0);
+            + new Vector3(-velocidade.Value * Time.fixedDeltaTime, 0, 0);
     }
 
-    private int getVelocidadeRandomica() {
-        return Random.Range(velocidadeMinima.Value, velocidadeMaxima.Value);
-    }
 
 }

@@ -121,6 +121,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 15961297}
+  - component: {fileID: 15961298}
+  - component: {fileID: 15961299}
   m_Layer: 0
   m_Name: Obstaculos Manager
   m_TagString: Untagged
@@ -144,6 +146,49 @@ Transform:
   m_Father: {fileID: 17760831}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &15961298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15961296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2bbed84fb707040b10b5b766c75512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VelocidadeObstaculos:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: 99f89ff458eca4240b8d2dc92783baa2, type: 2}
+--- !u!114 &15961299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15961296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be3d1ffce023b414abf42b9a6b822bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f1fe8a04039c4714ea00728e761c5ce8, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 15961296}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &17760830
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +533,7 @@ MonoBehaviour:
     UsarConstante: 0
     ConstanteValue: 0
     Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
+  gameEvent: {fileID: 11400000, guid: f1fe8a04039c4714ea00728e761c5ce8, type: 2}
 --- !u!4 &541223688
 Transform:
   m_ObjectHideFlags: 0
@@ -628,13 +674,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Box
+  - tag:
+      UsarConstante: 0
+      ConstanteValue: 
+      Variable: {fileID: 11400000, guid: dbbcfeed2604004488476e59919411f6, type: 2}
     prefab: {fileID: 18125523451340732, guid: cc205e27ae125ad488de4b05d76f0ced, type: 3}
     size: 20
-  - tag: Explosao
+  - tag:
+      UsarConstante: 0
+      ConstanteValue: 
+      Variable: {fileID: 11400000, guid: 74917d15ecaff4a4eb76468211a389cf, type: 2}
     prefab: {fileID: 5001827286167320596, guid: 92a9c9c9d0b4a2f4b94681e530fe126f,
       type: 3}
     size: 2
+  - tag:
+      UsarConstante: 0
+      ConstanteValue: 
+      Variable: {fileID: 11400000, guid: 82b60fee27063054f9b0b0338612d73a, type: 2}
+    prefab: {fileID: 4422582369096834369, guid: 11e9f12fbcf26c844828615e501bc162,
+      type: 3}
+    size: 20
 --- !u!4 &578351037
 Transform:
   m_ObjectHideFlags: 0
@@ -1631,13 +1690,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TempoDeSpawn:
     UsarConstante: 1
-    ConstanteValue: 2
+    ConstanteValue: 5
     Variable: {fileID: 0}
   InicioTransform: {fileID: 1291822719}
   isRunning:
     UsarConstante: 0
     ConstanteValue: 0
     Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
+  porcentage: 0.133
+  Tag1:
+    UsarConstante: 0
+    ConstanteValue: 
+    Variable: {fileID: 11400000, guid: dbbcfeed2604004488476e59919411f6, type: 2}
+  Tag2:
+    UsarConstante: 0
+    ConstanteValue: 
+    Variable: {fileID: 11400000, guid: 82b60fee27063054f9b0b0338612d73a, type: 2}
 --- !u!1 &1381059607
 GameObject:
   m_ObjectHideFlags: 0

@@ -122,14 +122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac82455681194204ebab88d62ccaee62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeMinima:
-    UsarConstante: 1
-    ConstanteValue: -2
-    Variable: {fileID: 0}
-  velocidadeMaxima:
-    UsarConstante: 1
-    ConstanteValue: -8
-    Variable: {fileID: 0}
+  velocidade:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: 99f89ff458eca4240b8d2dc92783baa2, type: 2}
   isRunning:
     UsarConstante: 0
     ConstanteValue: 0
