@@ -7,7 +7,7 @@ public class PlayerInput : InputType
 {
     public override void InputAction()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             inputEvent.Raise();
         }
