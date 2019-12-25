@@ -18,15 +18,18 @@ public class FieldofView : MonoBehaviour
             viewRadius = value;
         }
     }
+    [SerializeField]
     private float viewAngle;
     public float ViewAngle { get => viewAngle; set => viewAngle = value; }
 
+    [SerializeField]
     private LayerMask targetMask = 0;
     public LayerMask TargetMask { get => targetMask; set => targetMask = value; }
-
+    [SerializeField]
     private LayerMask obstacleMask = 0;
     public LayerMask ObstacleMask { get => obstacleMask; set => obstacleMask = value; }
 
+    [SerializeField]
     private TransformListReference visibleTargets;
     public TransformListReference VisibleTargets
     {

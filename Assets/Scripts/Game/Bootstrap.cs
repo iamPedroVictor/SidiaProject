@@ -6,9 +6,12 @@ public class Bootstrap : MonoBehaviour
 {
     [SerializeField]
     private BooleanReference isRunning;
+    [SerializeField]
+    private FloatReference velocidade;
 
     private void Awake()
     {
+        velocidade.Value = 4;
         isRunning.Value = true;
     }
 

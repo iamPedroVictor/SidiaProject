@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
+[CustomPropertyDrawer(typeof(TransformListReference))]
 public class TransformListReferenceDrawer : PropertyDrawer
 {
     private readonly string[] popupOptions = { "Usar constante", "Usar variavel" };

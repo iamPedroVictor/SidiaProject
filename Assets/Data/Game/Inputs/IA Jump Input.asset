@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0b81912d339c34b89559b6186d6a8c, type: 3}
+  m_Name: IA Jump Input
+  m_EditorClassIdentifier: 
+  inputEvent: {fileID: 11400000, guid: 75c400c25f973134eae00b2950dd7ae6, type: 2}
+  obstaculos:
+    UsarConstante: 0
+    ConstanteValue: []
+    Variable: {fileID: 11400000, guid: e3a39c65e7f0cff4a90b8383af3776ff, type: 2}
+  distanciaMinima:
+    UsarConstante: 1
+    ConstanteValue: 2.8
+    Variable: {fileID: 0}
+  isGround:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: 40de796310802c945b1ab3b909690c05, type: 2}
+  jumpIntervalTime: 0.9
+  tempo:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: ec6995ec09955b44d953ed6803ddad5f, type: 2}

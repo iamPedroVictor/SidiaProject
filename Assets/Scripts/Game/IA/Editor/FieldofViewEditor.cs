@@ -7,6 +7,11 @@ using UnityEditor;
 public class FieldofViewEditor : Editor
 {
     Vector2 scroll;
+
+    private readonly string[] popupOptions = { "Usar constante", "Usar variavel" };
+
+    private GUIStyle popupStyle;
+
     void OnSceneGUI()
     {
         FieldofView fow = (FieldofView)target;
@@ -42,34 +47,31 @@ public class FieldofViewEditor : Editor
         EditorGUILayout.EndVertical();
 
         position = EditorGUILayout.BeginVertical();
-        EditorGUILayout.LabelField("View Angle");
-        position.y += EditorGUIUtility.singleLineHeight;
-        position.width = EditorGUIUtility.currentViewWidth - 50;
-        view.ViewAngle = EditorGUI.Slider(position,view.ViewAngle, 0, 360);
+        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight));
+        position.width = EditorGUIUtility.currentViewWidth - 100;
+        EditorGUI.PropertyField(position, serializedObject.FindProperty("viewAngle"));
         EditorGUILayout.EndVertical();
 
-        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight));
+        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight * 1.5f));
 
         position = EditorGUILayout.BeginVertical();
         position.width = EditorGUIUtility.currentViewWidth - 50;
-        EditorGUILayout.LabelField("Target Mask");
         position.y += EditorGUIUtility.singleLineHeight * 1.2f;
-        view.TargetMask = EditorGUI.LayerField(position,view.TargetMask);
+        EditorGUI.LabelField(position, "");
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("targetMask"));
         EditorGUILayout.EndVertical();
-
-        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight));
 
         position = EditorGUILayout.BeginVertical();
         position.width = EditorGUIUtility.currentViewWidth - 50;
-        EditorGUILayout.LabelField("Obstacle Mask");
         position.y += EditorGUIUtility.singleLineHeight * 1.2f;
-        view.ObstacleMask = EditorGUI.LayerField(position, view.ObstacleMask);
+        EditorGUI.LabelField(position, "");
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("obstacleMask"));
         EditorGUILayout.EndVertical();
 
-        
-        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight * 1.2f));
+
+        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight * 1.5f));
         GUILayout.Label("Mesh View", GUILayout.Width(EditorGUIUtility.currentViewWidth),
-            GUILayout.Height(EditorGUIUtility.singleLineHeight));
+        GUILayout.Height(EditorGUIUtility.singleLineHeight));
         position = EditorGUILayout.BeginVertical();
         GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight));
         position.width = EditorGUIUtility.currentViewWidth - 100;
@@ -96,13 +98,21 @@ public class FieldofViewEditor : Editor
 
         position = EditorGUILayout.BeginVertical();
         position.width = EditorGUIUtility.currentViewWidth - 50;
-        EditorGUILayout.LabelField("Reference view mesh filter");
         position.y += EditorGUIUtility.singleLineHeight * 1.2f;
+        position.height = 15;
         EditorGUI.ObjectField(position, serializedObject.FindProperty("refviewMeshFilter"));
         EditorGUILayout.EndVertical();
 
-        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight * 2));
+        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight * 2f));
+
+        position = EditorGUILayout.BeginVertical();
+        position.y += EditorGUIUtility.singleLineHeight * 1.2f;
+        position.height = EditorGUIUtility.singleLineHeight;
+        position.width = EditorGUIUtility.currentViewWidth - 50;
+        EditorGUI.PropertyField(position, serializedObject.FindProperty("visibleTargets"));
+        EditorGUILayout.EndVertical();
+
+        GUILayout.Label("", GUILayout.Width(380), GUILayout.Height(EditorGUIUtility.singleLineHeight * 3.2f));
         serializedObject.ApplyModifiedProperties();
     }
-
 }

@@ -14,8 +14,12 @@ public class JumpBehaviour : MonoBehaviour
     [SerializeField]
     private FloatReference distanciaDoChao;
     private float maxDistancia;
-    private bool isGround;
-
+    [SerializeField]
+    private BooleanReference isGround;
+    [SerializeField]
+    private BooleanReference jump;
+    [SerializeField]
+    private LayerMask groundMask;
 
     private void Awake()
     {
@@ -28,18 +32,24 @@ public class JumpBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGround = NoChao();
-        anime.SetBool("isGround", isGround);
-        if (Input.GetMouseButtonDown(0) && isGround)
+        isGround.Value = NoChao();
+        jump.Value = !isGround.Value;
+        anime.SetBool("isGround", isGround.Value);
+    }
+
+    public void Jump()
+    {
+        if (isGround.Value)
         {
-            rb.AddForce(this.force.Value,ForceMode.Impulse);
+            jump.Value = true;
+            rb.AddForce(this.force.Value, ForceMode.Impulse);
             anime.SetTrigger("jump");
         }
     }
 
     private bool NoChao()
     {
-        return Physics.Raycast(transform.position, -Vector3.up, maxDistancia);
+        return Physics.Raycast(transform.position, -Vector3.up, maxDistancia, groundMask);
     }
 
 }
