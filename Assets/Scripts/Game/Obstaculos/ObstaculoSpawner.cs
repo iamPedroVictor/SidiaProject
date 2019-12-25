@@ -18,22 +18,45 @@ public class ObstaculoSpawner : MonoBehaviour
     [SerializeField]
     private StringReference Tag1, Tag2;
     private float tempoSpawn = 2f;
+    [SerializeField]
+    private BooleanReference first;
+    [SerializeField]
+    private float offsetY;
 
+    private void Awake()
+    {
+        first.Value = true;
+    }
     private void Update()
     {
         if (!isRunning.Value)
         {
             return;
         }
+        
         if(Time.timeSinceLevelLoad > tempoSpawn)
         {
             float proximo = TempoDeSpawn.Value;
             tempoSpawn += proximo;
             string tag = GetTag();
             
-            ObjectPooler.Instance.SpawnFromPool(tag, InicioTransform.position, Quaternion.identity);
+            GameObject obs = ObjectPooler.Instance.SpawnFromPool(tag, InicioTransform.position, Quaternion.identity);
+            if (first.Value)
+            {
+                BoardFollowBox(obs);             
+            }
         }
     }
+    
+    private void BoardFollowBox(GameObject boxObject)
+    {
+        ObstaculoBoard board = boxObject.AddComponent<ObstaculoBoard>();
+        board.BoardTransform = GameObject.Find("Board").GetComponent<RectTransform>();
+        board.Obstaculo = boxObject.transform;
+        board.OffsetY = offsetY;
+        first.Value = false;
+    }
+
     private string GetTag()
     {
         float number = Random.Range(0, 1f);
