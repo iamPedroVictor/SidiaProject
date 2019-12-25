@@ -495,6 +495,7 @@ MonoBehaviour:
     UsarConstante: 0
     ConstanteValue: 0
     Variable: {fileID: 11400000, guid: 6920b94e2ef33254992337213232430e, type: 2}
+  multiplyVelocityAppend: 0.25
 --- !u!4 &541223688
 Transform:
   m_ObjectHideFlags: 0
@@ -1711,7 +1712,7 @@ MonoBehaviour:
     UsarConstante: 0
     ConstanteValue: 0
     Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
-  porcentage: 0.133
+  porcentage: 0.61
   Tag1:
     UsarConstante: 0
     ConstanteValue: 
