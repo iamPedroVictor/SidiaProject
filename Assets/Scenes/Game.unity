@@ -2255,6 +2255,9 @@ GameObject:
   - component: {fileID: 1399346309}
   - component: {fileID: 1399346311}
   - component: {fileID: 1399346310}
+  - component: {fileID: 1399346314}
+  - component: {fileID: 1399346313}
+  - component: {fileID: 1399346312}
   m_Layer: 0
   m_Name: CoinManager
   m_TagString: Untagged
@@ -2357,6 +2360,73 @@ MonoBehaviour:
     UsarConstante: 0
     ConstanteValue: 0
     Variable: {fileID: 11400000, guid: b86f1ff0a5517884dae2329091518345, type: 2}
+--- !u!114 &1399346312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399346307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be3d1ffce023b414abf42b9a6b822bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 40bac9029a9f83b45af709e0af1e48d6, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1399346313}
+        m_MethodName: SalvarMoedas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1399346313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399346307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd000a1fe82d90c4db9c6992c2c4ba70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moedasTotal:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: b86f1ff0a5517884dae2329091518345, type: 2}
+  playerPrefsMoeda:
+    UsarConstante: 0
+    ConstanteValue: 
+    Variable: {fileID: 11400000, guid: a4907ff990672024aabb8f45f8ab9d02, type: 2}
+--- !u!114 &1399346314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399346307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f763e6b311768245a102d98a3203399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moedasTotal:
+    UsarConstante: 0
+    ConstanteValue: 0
+    Variable: {fileID: 11400000, guid: b86f1ff0a5517884dae2329091518345, type: 2}
+  playerPrefsMoeda:
+    UsarConstante: 0
+    ConstanteValue: 
+    Variable: {fileID: 11400000, guid: a4907ff990672024aabb8f45f8ab9d02, type: 2}
 --- !u!1 &1402454352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100120, guid: 5917c0e93d180a842b61d1ebc62a195c,
