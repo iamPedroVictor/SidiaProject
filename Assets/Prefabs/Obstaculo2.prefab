@@ -107,12 +107,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77ad490b0ac0764b8ebf5a381bd80ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolTag: Box
+  poolTag:
+    UsarConstante: 0
+    ConstanteValue: 
+    Variable: {fileID: 11400000, guid: dbbcfeed2604004488476e59919411f6, type: 2}
   gameOverEvent: {fileID: 11400000, guid: 40bac9029a9f83b45af709e0af1e48d6, type: 2}
   isRunning:
     UsarConstante: 0
     ConstanteValue: 0
     Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
+  BoardRender: {fileID: 11400000, guid: d65753ba656304245b589076a141d65b, type: 2}
 --- !u!114 &114220346759189368
 MonoBehaviour:
   m_ObjectHideFlags: 0

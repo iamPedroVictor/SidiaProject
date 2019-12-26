@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6572307040919790882}
   - component: {fileID: 1976575697672498110}
   - component: {fileID: 2018041754683431775}
+  - component: {fileID: 114034504696599774}
   m_Layer: 11
   m_Name: Coin
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 275a78b30f8a63646922832985e97f3f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,3 +113,21 @@ MonoBehaviour:
     UsarConstante: 0
     ConstanteValue: 0
     Variable: {fileID: 11400000, guid: 7eb7a180658bee0479666364f72d9627, type: 2}
+--- !u!114 &114034504696599774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3555821963356688102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f35c18e70f6cc44b3b61f173fe883b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moedaEvento: {fileID: 11400000, guid: 426a8b9c1d6097644868f9db11f28446, type: 2}
+  moedaTag:
+    UsarConstante: 0
+    ConstanteValue: 
+    Variable: {fileID: 11400000, guid: 8feefdea44353744989031034ce2fe00, type: 2}
+  MoedaBoard: {fileID: 11400000, guid: 19607794e84a1fc4e8b71a7a36ac2a8e, type: 2}

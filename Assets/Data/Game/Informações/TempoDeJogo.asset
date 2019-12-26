@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4413e0546a863a94e98e653e1957126e, type: 3}
-  m_Name: BoxTag
+  m_Script: {fileID: 11500000, guid: ca538da9287b1ae4e945eb3c55b359f4, type: 3}
+  m_Name: TempoDeJogo
   m_EditorClassIdentifier: 
-  Value: Box
+  Value: 15

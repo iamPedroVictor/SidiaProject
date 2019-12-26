@@ -51,7 +51,7 @@ public class ObstaculoSpawner : MonoBehaviour
     private void BoardFollowBox(GameObject boxObject)
     {
         ObstaculoBoard board = boxObject.AddComponent<ObstaculoBoard>();
-        board.BoardTransform = GameObject.Find("Board").GetComponent<RectTransform>();
+        board.BoardTransform = GameObject.Find("ObstaculoBoard").GetComponent<RectTransform>();
         board.Obstaculo = boxObject.transform;
         board.OffsetY = offsetY;
         first.Value = false;

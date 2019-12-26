@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa3ce7920eab01438d3faf0c8d6c803, type: 3}
-  m_Name: BoardFirst
+  m_Script: {fileID: 11500000, guid: 899356952d14d7144b270ea7e209876e, type: 3}
+  m_Name: AumentarDificuldade
   m_EditorClassIdentifier: 
-  Value: 0
