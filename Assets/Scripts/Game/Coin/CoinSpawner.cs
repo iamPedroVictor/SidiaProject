@@ -13,6 +13,7 @@ public class CoinSpawner : MonoBehaviour
     [SerializeField]
     [Range(0, 1)]
     private float porcentage;
+    [SerializeField]
     private float proximoTempo = 1.3f;
     [SerializeField]
     private GameObject coinPrefab;
